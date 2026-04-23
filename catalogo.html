@@ -3,38 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow Beauty | Catálogo</title>
+    <title>Glow Beauty | Catálogo de Produtos</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #FFF0F5; margin: 0; }
-        nav { background: #D87093; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        h1 { text-align: center; color: #D87093; margin: 30px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 40px 40px; }
-        .card { background: white; padding: 15px; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; }
-        .card h2 { color: #D87093; font-size: 1.1em; margin: 10px 0; }
-        .card p { color: #888; font-size: 13px; margin-bottom: 10px; } /* Requisito: Descrição */
-        .card .preco { font-weight: bold; color: #333; margin-bottom: 15px; }
-        .card a { background: #D87093; color: white; text-decoration: none; padding: 8px 15px; border-radius: 8px; font-size: 13px; display: inline-block; }
-        @media (max-width: 600px) { nav a { display: block; margin: 10px 0; } }
+        /* Estilos Gerais - Identidade Visual Rosa */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #FFF0F5; margin: 0; color: #333; }
+        
+        /* Menu de Navegação - Requisito 6 */
+        nav { background-color: #D87093; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        nav a:hover { text-decoration: underline; }
+
+        h1 { text-align: center; color: #D87093; margin: 30px 0; font-size: 2em; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Grid de Produtos - Requisito 4.2 */
+        .container-grid { max-width: 1200px; margin: 0 auto; padding: 0 20px 40px 20px; }
+        .produtos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+        /* Estilo dos Cards - Requisito 4.2 */
+        .card { background-color: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .card h2 { color: #D87093; font-size: 1.2em; margin: 10px 0; }
+        
+        /* Descrição do Item - Requisito 4.2 */
+        .card p { color: #666; font-size: 14px; line-height: 1.4; margin-bottom: 15px; height: 40px; overflow: hidden; }
+        
+        .card .preco { font-size: 1.1em; font-weight: bold; color: #444; margin-bottom: 20px; display: block; }
+        
+        /* Botão/Link para Produto - Requisito 4.2 e 4.3 */
+        .btn-detalhes { background-color: #D87093; color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: bold; font-size: 13px; display: inline-block; transition: 0.2s; }
+        .btn-detalhes:hover { background-color: #C71585; }
+
+        /* Responsividade Básica - Requisito 7 (Diferencial) */
+        @media (max-width: 600px) {
+            nav a { display: block; margin: 10px 0; }
+            h1 { font-size: 1.5em; }
+            .produtos-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html">HOME</a>
+        <a href="index.html">INÍCIO</a>
         <a href="catalogo.html">PRODUTOS</a>
-        <a href="login.html">LOGIN</a>
-        <a href="cadastro.html">CADASTRO</a>
+        <a href="login.html">ENTRAR</a>
+        <a href="cadastro.html">CADASTRE-SE</a>
     </nav>
-    <h1>Nossa Coleção</h1>
-    <div class="grid">
-        <div class="card">
-            <img src="foto6.jpeg">
-            <h2>Gloss Hawaii</h2>
-            <p>Brilho tropical com hidratação intensa.</p>
-            <div class="preco">R$ 85,00</div>
-            <a href="produto.html">VER DETALHES</a>
+
+    <h1>Nossa Coleção Glow</h1>
+
+    <div class="container-grid">
+        <div class="produtos-grid">
+            
+            <div class="card">
+                <img src="foto1.jpeg" alt="Gloss Vegas">
+                <h2>Gloss Vegas</h2>
+                <p>Brilho holográfico intenso com longa duração para noites incríveis.</p>
+                <span class="preco">R$ 85,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
+            <div class="card">
+                <img src="foto2.jpeg" alt="Paleta Night">
+                <h2>Paleta Night</h2>
+                <p>Cores super pigmentadas e fáceis de esfumar para um olhar marcante.</p>
+                <span class="preco">R$ 120,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
+            <div class="card">
+                <img src="foto3.jpeg" alt="Iluminador Sun">
+                <h2>Iluminador Sun</h2>
+                <p>Realce seu brilho natural com nossa fórmula de partículas finas.</p>
+                <span class="preco">R$ 75,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
+            <div class="card">
+                <img src="foto4.jpeg" alt="Base Soft Skin">
+                <h2>Base Soft Skin</h2>
+                <p>Cobertura média com toque aveludado e hidratação o dia todo.</p>
+                <span class="preco">R$ 95,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
+            <div class="card">
+                <img src="foto5.jpeg" alt="Blush Florida">
+                <h2>Blush Florida</h2>
+                <p>O tom rosado perfeito para garantir aquele ar de saúde natural.</p>
+                <span class="preco">R$ 65,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
+            <div class="card">
+                <img src="foto6.jpeg" alt="Gloss Hawaii">
+                <h2>Gloss Hawaii</h2>
+                <p>Hidratação profunda com óleo de coco e brilho tropical leve.</p>
+                <span class="preco">R$ 85,00</span>
+                <a href="produto.html" class="btn-detalhes">VER DETALHES</a>
+            </div>
+
         </div>
-        </div>
+    </div>
+
 </body>
 </html>
