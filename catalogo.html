@@ -2,42 +2,34 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow Beauty | Catálogo</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #FFF0F5; margin: 0; }
+        nav { background: #D87093; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
+        .card { background: white; padding: 15px; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .card img { width: 100%; border-radius: 15px; height: 250px; object-fit: cover; }
+        h2 { color: #D87093; font-size: 1.2em; margin: 10px 0; }
+        @media (max-width: 600px) { .grid { padding: 20px; } nav a { display: block; margin: 10px 0; } }
+    </style>
 </head>
-<body style="background-color: #FFF0F5; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px;">
-    <h1 style="color: #D87093; text-align: center; letter-spacing: 5px;">NOSSA COLEÇÃO</h1>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto1.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Gloss Glow</h2>
-            <p style="font-size: 12px;">R$ 85,00</p>
-        </div>
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto2.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Blush Rosé</h2>
-            <p style="font-size: 12px;">R$ 92,00</p>
-        </div>
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto3.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Iluminador</h2>
-            <p style="font-size: 12px;">R$ 78,00</p>
-        </div>
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto4.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Base Soft</h2>
-            <p style="font-size: 12px;">R$ 65,00</p>
-        </div>
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto5.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Sérum</h2>
-            <p style="font-weight: bold;">R$ 120,00</p>
-        </div>
-        <div style="background: white; padding: 10px; border-radius: 15px; text-align: center;">
-            <img src="foto6.jpeg" style="width: 100%; border-radius: 10px;">
-            <h2 style="font-size: 14px; color: #D87093;">Batom</h2>
-            <p style="font-size: 12px;">R$ 55,00</p>
-        </div>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="catalogo.html">PRODUTOS</a>
+        <a href="login.html">LOGIN</a>
+        <a href="cadastro.html">CADASTRO</a>
+    </nav>
+    <h1 style="text-align: center; color: #D87093; margin-top: 30px;">NOSSA COLEÇÃO</h1>
+    <div class="grid">
+        <div class="card"><img src="foto1.jpeg"><h2>Gloss Vegas</h2><p>R$ 85,00</p></div>
+        <div class="card"><img src="foto2.jpeg"><h2>Paleta Night</h2><p>R$ 120,00</p></div>
+        <div class="card"><img src="foto3.jpeg"><h2>Iluminador California</h2><p>R$ 75,00</p></div>
+        <div class="card"><img src="foto4.jpeg"><h2>Base Soft Skin</h2><p>R$ 95,00</p></div>
+        <div class="card"><img src="foto5.jpeg"><h2>Blush Florida</h2><p>R$ 65,00</p></div>
+        <div class="card"><img src="foto6.jpeg"><h2>Gloss Hawaii</h2><p>R$ 85,00</p></div>
     </div>
-    <p style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #D87093;">Voltar</a></p>
 </body>
 </html>
